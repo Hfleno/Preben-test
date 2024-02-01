@@ -13,12 +13,12 @@
   </body>
 
   <script>
-    let response = []
-
     async function getText() {
-      response = await fetch.get('https://admin-test.p-secure.com/api/user/home/GetCases')
-      console.log(response.data)
-      document.getElementById('demo').innerHTML = y
+      let response = await fetch('https://admin-test.p-secure.com/api/user/home/GetCases')
+      const json = await response.json()
+      const res = json.data
+      console.log(res)
+      document.getElementById('demo').innerHTML = res
     }
     getText()
   </script>
