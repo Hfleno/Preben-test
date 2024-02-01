@@ -1,17 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vuetify 3 Vite Preview</title>
-  <script type="module" crossorigin src="./assets/index-nAv4R95r.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-wZAv2ojo.css">
-</head>
+    <div id="demo"></div>
+  </head>
 
-<body>
+  <body>
     <div id="app"></div>
-</body>
+  </body>
 
+  <script>
+    let response = []
+
+    async function getText() {
+      response = await fetch.get('https://admin-test.p-secure.com/api/user/home/GetCases')
+      console.log(response.data)
+      document.getElementById('demo').innerHTML = y
+    }
+  </script>
 </html>
