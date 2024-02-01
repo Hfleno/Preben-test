@@ -15,9 +15,7 @@
   <script>
     async function getText() {
       try {
-        let response = await fetch('https://admin-test.p-secure.com/user/home/GetCases', {
-          mode: 'no-cors'
-        })
+        let response = await fetch('https://admin-test.p-secure.com/user/home/GetCases')
         const json = await response.json()
         const res = json.data
         console.log(res)
